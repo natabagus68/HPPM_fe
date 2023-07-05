@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* thead th:first-child {
+  background-color: red;
+}
+
+thead th:last-child {
+  background-color: red;
+} */
+
+tbody tr:last-child {
+  border: 0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fbf9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
