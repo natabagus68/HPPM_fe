@@ -118,7 +118,7 @@ export default function useAdminLayout() {
     {
       id: uuid(),
       name: "User",
-      link: "user",
+      link: "user/account",
       active: false,
       icon: <User2 color="#514E4E" size={22} />,
       children: [
