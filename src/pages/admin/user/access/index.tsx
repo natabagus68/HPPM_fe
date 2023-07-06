@@ -1,15 +1,17 @@
-import { Edit2, Map, Plus, Search } from "lucide-react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  ChevronsLeft,
-  ChevronsRight,
-  Trash2,
-} from "lucide-react";
+import { Edit2, Map, Plus } from "lucide-react";
+import { Trash2 } from "lucide-react";
 import useAccess from "./access-model";
 import Breadcrumbs from "@common/components/breadcrumbs/Breadcrumbs";
 import ModalContainer from "@common/components/modal/modal-container";
 import ModalDelete from "@common/components/modal/modal-delete";
+import Table from "@common/components/table/table";
+import THead from "@common/components/table/thead";
+import Tr from "@common/components/table/tr";
+import Th from "@common/components/table/th";
+import TBody from "@common/components/table/tbody";
+import Td from "@common/components/table/td";
+import Filter from "@common/components/table/fitler";
+import Pagination from "@common/components/table/pagination";
 
 export default function Index() {
   const hook = useAccess();
@@ -56,7 +58,7 @@ export default function Index() {
             Access
           </button>
         </div>
-        <div className="w-full bg-gray-50 rounded-md border flex items-center justify-between px-3 py-2">
+        {/* <div className="w-full bg-gray-50 rounded-md border flex items-center justify-between px-3 py-2">
           <div className="flex items-center gap-2 border bg-white w-[250px] h-8 rounded-md px-3 text-base">
             <Search color="#D0D3D9" size={18} />
             <input
@@ -66,74 +68,43 @@ export default function Index() {
               // onChange={handleSearch}
             />
           </div>
-        </div>
-        <div className="border flex-1 flex rounded-md overflow-hidden">
-          <table className="flex-1">
-            <thead className="border-b bg-gray-50">
-              <tr className="px-4">
-                <th className="text-start px-4 py-3 text-base font-medium">
-                  Role
-                </th>
-                <th className="text-start px-4 py-3 text-base font-medium">
-                  Action
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {arr?.map((item, i) => (
-                <tr className="border-b" key={i}>
-                  <td className="text-start p-4 text-base">{item.role}</td>
-                  <td className="text-start p-4 text-base">
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={() => hook.navigate("mapping-menu")}
-                        className="w-9 h-9 rounded bg-[#667085] flex items-center justify-center"
-                      >
-                        <Map color="white" size={16} />
-                      </button>
-                      <button className="w-9 h-9 rounded bg-[#F79009] flex items-center justify-center">
-                        <Edit2 color="white" size={16} />
-                      </button>
-                      <button
-                        onClick={() => hook.setOpenModalDelete(true)}
-                        className="w-9 h-9 rounded bg-[#DA3E33] flex items-center justify-center"
-                      >
-                        <Trash2 color="white" size={16} />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="w-full flex items-center justify-between">
-          <span>0 of 100 row(s) selected.</span>
-          <div className="flex items-center gap-[32px]">
-            <div className="flex items-center gap-3">
-              <span>Limit</span>
-              <select className="border bg-white h-[42px] px-1">
-                <option>5</option>
-                <option>10</option>
-              </select>
-            </div>
-            <span>Page 1 of 10</span>
-            <div className="flex items-center gap-2">
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronsLeft width={18} height={18} />
-              </button>
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronLeft width={18} height={18} />
-              </button>
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronRight width={18} height={18} />
-              </button>
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronsRight width={18} height={18} />
-              </button>
-            </div>
-          </div>
-        </div>
+        </div> */}
+        <Filter />
+        <Table>
+          <THead>
+            <Tr>
+              <Th>Role</Th>
+              <Th>Action</Th>
+            </Tr>
+          </THead>
+          <TBody>
+            {arr?.map((item, i) => (
+              <Tr key={i}>
+                <Td>{item.role}</Td>
+                <Td className="w-0">
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => hook.navigate("mapping-menu")}
+                      className="w-9 h-9 rounded bg-[#667085] flex items-center justify-center"
+                    >
+                      <Map color="white" size={16} />
+                    </button>
+                    <button className="w-9 h-9 rounded bg-[#F79009] flex items-center justify-center">
+                      <Edit2 color="white" size={16} />
+                    </button>
+                    <button
+                      onClick={() => hook.setOpenModalDelete(true)}
+                      className="w-9 h-9 rounded bg-[#DA3E33] flex items-center justify-center"
+                    >
+                      <Trash2 color="white" size={16} />
+                    </button>
+                  </div>
+                </Td>
+              </Tr>
+            ))}
+          </TBody>
+        </Table>
+        <Pagination />
       </div>
       <ModalContainer open={hook.openModalDelete}>
         <ModalDelete
