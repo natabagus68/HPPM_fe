@@ -36,10 +36,37 @@ export default function Index() {
             </option>
           </select>
         </div>
+        <h1 className="my-4 text-[16px] font-[600] text-[#514E4E]">Green</h1>
         <div className="flex flex-col gap-2 mt-4">
           <label className="text-[16px] font-[400] text-[#514E4E]">USL</label>
           <input
             type="text"
+            placeholder="Input usl"
+            className="w-full py-2 px-4 border border-[#D0D3D9] rounded-md bg-white outline-none"
+          />
+        </div>
+        <div className="flex flex-col gap-2 mt-4">
+          <label className="text-[16px] font-[400] text-[#514E4E]">LSL</label>
+          <input
+            type="text"
+            placeholder="Input lsl"
+            className="w-full py-2 px-4 border border-[#D0D3D9] rounded-md bg-white outline-none"
+          />
+        </div>
+        <h1 className="my-4 text-[16px] font-[600] text-[#514E4E]">Yellow</h1>
+        <div className="flex flex-col gap-2 mt-4">
+          <label className="text-[16px] font-[400] text-[#514E4E]">USL</label>
+          <input
+            type="text"
+            placeholder="Input usl"
+            className="w-full py-2 px-4 border border-[#D0D3D9] rounded-md bg-white outline-none"
+          />
+        </div>
+        <div className="flex flex-col gap-2 mt-4">
+          <label className="text-[16px] font-[400] text-[#514E4E]">LSL</label>
+          <input
+            type="text"
+            placeholder="Input lsl"
             className="w-full py-2 px-4 border border-[#D0D3D9] rounded-md bg-white outline-none"
           />
         </div>

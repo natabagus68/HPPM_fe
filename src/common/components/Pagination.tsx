@@ -25,7 +25,10 @@ export const Pagination = ({
         </button>
         {arr.map((item, i) => {
           return (
-            <button className="w-[48px] h-[42px] border border-[#D0D3D9] flex items-center justify-center">
+            <button
+              key={i}
+              className="w-[48px] h-[42px] border border-[#D0D3D9] flex items-center justify-center"
+            >
               {i + 1}
             </button>
           );
