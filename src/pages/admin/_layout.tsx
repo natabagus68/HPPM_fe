@@ -43,10 +43,10 @@ export default function LandingPage() {
         </div>
       </nav>
       <main
-        className={`pt-[${hook.padding.height}px] pl-[${hook.padding.width}px]`}
+        className={`transition-all`}
         style={{
           paddingTop: `${hook.padding.height}px`,
-          paddingLeft: `${hook.padding.width}px`,
+          paddingLeft: `${hook.isOpenSidebar ? hook.padding.width : 0}px`,
         }}
       >
         <div className="h-[3000px] p-6">
