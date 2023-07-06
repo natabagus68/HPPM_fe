@@ -31,16 +31,7 @@ export default function useAdminLayout() {
       link: "dashboard",
       active: false,
       icon: <LayoutGrid color="#514E4E" size={22} />,
-      children: [
-        {
-          id: uuid(),
-          name: "General",
-          link: "dashboard/general",
-          active: false,
-          icon: null,
-          children: [],
-        },
-      ],
+      children: [],
     },
     {
       id: uuid(),
@@ -121,30 +112,13 @@ export default function useAdminLayout() {
       link: "user/account",
       active: false,
       icon: <User2 color="#514E4E" size={22} />,
-      children: [
-        // {
-        //   id: uuid(),
-        //   name: "Account",
-        //   link: "user/account",
-        //   active: false,
-        //   icon: null,
-        //   children: [],
-        // },
-        // {
-        //   id: uuid(),
-        //   name: "Access",
-        //   link: "user/access",
-        //   active: false,
-        //   icon: null,
-        //   children: [],
-        // },
-      ],
+      children: [],
     },
   ]);
 
   const padding = {
     height: 70,
-    width: 243,
+    width: 260,
   };
 
   function MenuItem({ data }: { data: TLinks }) {

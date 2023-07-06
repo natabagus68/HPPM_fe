@@ -1,8 +1,5 @@
 import Breadcrumbs from "@common/components/breadcrumbs/Breadcrumbs";
-import {
-  ArrowLeft,
-  Dot,
-} from "lucide-react";
+import { ArrowLeft, Dot } from "lucide-react";
 import useMappingMenu from "./mapping-menu-model";
 
 export default function Index() {
@@ -329,33 +326,6 @@ export default function Index() {
             </tbody>
           </table>
         </div>
-        {/* <div className="w-full h-[57px] bg-gray-50 border flex items-center justify-between px-4">
-          <span>0 of 100 row(s) selected.</span>
-          <div className="flex items-center gap-[32px]">
-            <div className="flex items-center gap-3">
-              <span>Limit</span>
-              <select className="border bg-white h-[42px] px-1">
-                <option>5</option>
-                <option>10</option>
-              </select>
-            </div>
-            <span>Page 1 of 10</span>
-            <div className="flex items-center gap-2">
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronsLeft width={18} height={18} />
-              </button>
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronLeft width={18} height={18} />
-              </button>
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronRight width={18} height={18} />
-              </button>
-              <button className="w-[32px] h-[32px] border rounded-md bg-white flex items-center justify-center">
-                <ChevronsRight width={18} height={18} />
-              </button>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

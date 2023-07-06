@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import useAccess from "./access-model";
 import Breadcrumbs from "@common/components/breadcrumbs/Breadcrumbs";
+import ModalContainer from "@common/components/modal/modal-container";
+import ModalDelete from "@common/components/modal/modal-delete";
 
 export default function Index() {
   const hook = useAccess();
@@ -92,7 +94,10 @@ export default function Index() {
                       <button className="w-9 h-9 rounded bg-[#F79009] flex items-center justify-center">
                         <Edit2 color="white" size={16} />
                       </button>
-                      <button className="w-9 h-9 rounded bg-[#DA3E33] flex items-center justify-center">
+                      <button
+                        onClick={() => hook.setOpenModalDelete(true)}
+                        className="w-9 h-9 rounded bg-[#DA3E33] flex items-center justify-center"
+                      >
                         <Trash2 color="white" size={16} />
                       </button>
                     </div>
@@ -130,6 +135,12 @@ export default function Index() {
           </div>
         </div>
       </div>
+      <ModalContainer open={hook.openModalDelete}>
+        <ModalDelete
+          setOpen={hook.setOpenModalDelete}
+          fn={() => alert("Delete")}
+        />
+      </ModalContainer>
     </div>
   );
 }
