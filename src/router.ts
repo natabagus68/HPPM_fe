@@ -7,13 +7,15 @@ export type Path =
   | `/`
   | `/admin`
   | `/admin/admin-layout-model`
-  | `/admin/dashboard/general`
+  | `/admin/dashboard`
   | `/admin/notification`
   | `/admin/report`
   | `/admin/user/access`
   | `/admin/user/access/access-model`
   | `/admin/user/access/mapping-menu`
+  | `/admin/user/access/mapping-menu/mapping-menu-model`
   | `/admin/user/account`
+  | `/admin/user/account/account-model`
   | `/landing-page-model`
 
 export type Params = {

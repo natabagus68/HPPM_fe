@@ -26,8 +26,8 @@ export default function Index() {
     <div className="flex flex-col gap-4">
       <Breadcrumbs
         data={[
-          { name: "User", link: "../user/account" },
-          { name: "Access", link: "../user/account", active: true },
+          { name: "User", link: "/admin/user/account" },
+          { name: "Access", link: "/admin/user/access", active: true },
         ]}
       />
       <div className="flex flex-col gap-4 border p-6 rounded-md">
