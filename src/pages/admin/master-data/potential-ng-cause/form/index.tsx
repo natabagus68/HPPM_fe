@@ -35,7 +35,7 @@ export default function Index() {
         </div>
 
         <button className="py-3 px-5 bg-red-600 rounded-md flex gap-2 items-center mt-6 text-white w-[300px] justify-center ">
-          <SaveIcon className="w-4 h-4 text-white" /> Save
+          <SaveIcon size={16} color="white" /> Save
         </button>
       </div>
     </div>

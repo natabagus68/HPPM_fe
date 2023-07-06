@@ -4,7 +4,7 @@ import { useMonitoringRealTime } from "./monitoring-realtime-model-view";
 import moment from "moment";
 import ChartLinePointMultipleLine from "@common/components/chart/ChartPointMultipleLine";
 
-export const Index = () => {
+export default function Index() {
   const model = useMonitoringRealTime();
   return (
     <>
@@ -81,12 +81,12 @@ export const Index = () => {
             </div>
           </div>
           <div className="border-r-4 border-white">
-            <div className="w-[404px] h-[117px] border-b-4 border-white flex justify-center items-center">
+            <div className="w-full h-[117px] border-b-4 border-white flex justify-center items-center">
               <h4 className="text-orange-500 text-[32px] font-[600]">
                 Potential NG Cause
               </h4>
             </div>
-            <div className="w-[382px] h-[117px] flex justify-center items-center bg-red-500">
+            <div className="w-[380px] h-[117px] flex justify-center items-center bg-red-500">
               <h4 className="text-white text-[32px] font-bold">
                 Setting Machine
               </h4>
@@ -104,7 +104,7 @@ export const Index = () => {
           </div>
           <ChartLinePoint />
         </div>
-        <div className="w-full h-[343px] border-b-4 px-5 py-4">
+        <div className="w-full h-[300px] px-5 pt-4">
           <div className="w-full flex">
             <h1 className="font-bold text-white text-[24px]">
               Anomaly Parameter :{" "}
@@ -118,4 +118,4 @@ export const Index = () => {
       </div>
     </>
   );
-};
+}
