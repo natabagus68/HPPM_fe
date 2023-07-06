@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import { Menu } from "lucide-react";
 import companyLogo from "@assets/company-logo.png";
-import useAdminLayout from "./admin-layout-model";
+import useAdminLayout from "./_admin-layout-model";
 
 export default function LandingPage() {
   const hook = useAdminLayout();

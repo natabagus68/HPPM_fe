@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 export default function Th({
   className,
   children,
@@ -9,7 +11,10 @@ export default function Th({
 }) {
   return (
     <th
-      className={`text-start px-4 py-3 text-base font-medium ${className}`}
+      className={twMerge(
+        "text-start px-4 py-3 text-base font-medium",
+        className
+      )}
       {...props}
     >
       {children}

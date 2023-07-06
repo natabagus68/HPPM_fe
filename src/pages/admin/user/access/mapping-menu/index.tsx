@@ -1,6 +1,12 @@
 import Breadcrumbs from "@common/components/breadcrumbs/Breadcrumbs";
 import { ArrowLeft, Dot } from "lucide-react";
 import useMappingMenu from "./mapping-menu-model";
+import Table from "@common/components/table/table";
+import THead from "@common/components/table/thead";
+import Tr from "@common/components/table/tr";
+import Th from "@common/components/table/th";
+import TBody from "@common/components/table/tbody";
+import Td from "@common/components/table/td";
 
 export default function Index() {
   const hook = useMappingMenu();
@@ -144,9 +150,9 @@ export default function Index() {
     if (!!data.children?.length) {
       return (
         <>
-          <tr className={`border-b`}>
-            <td
-              className={`text-start p-4 text-base ${
+          <Tr>
+            <Td
+              className={`${
                 !!!data.parentId ? "bg-[#667085] text-white" : null
               }`}
             >
@@ -154,8 +160,8 @@ export default function Index() {
                 {!!data.parentId ? <Dot /> : null}
                 <span>{data.name}</span>
               </div>
-            </td>
-            <td className="text-center p-4 text-base">
+            </Td>
+            <Td className="text-center">
               {!!data.permissions?.find((e) => e.name === "View")?.disable ? (
                 <input
                   type="checkbox"
@@ -165,8 +171,8 @@ export default function Index() {
                   }
                 />
               ) : null}
-            </td>
-            <td className="text-center p-4 text-base">
+            </Td>
+            <Td className="text-center">
               {!!data.permissions?.find((e) => e.name === "Create")?.disable ? (
                 <input
                   type="checkbox"
@@ -177,8 +183,8 @@ export default function Index() {
                   }
                 />
               ) : null}
-            </td>
-            <td className="text-center p-4 text-base">
+            </Td>
+            <Td className="text-center">
               {!!data.permissions?.find((e) => e.name === "Edit")?.disable ? (
                 <input
                   type="checkbox"
@@ -188,8 +194,8 @@ export default function Index() {
                   }
                 />
               ) : null}
-            </td>
-            <td className="text-center p-4 text-base">
+            </Td>
+            <Td className="text-center">
               {!!data.permissions?.find((e) => e.name === "Delete")?.disable ? (
                 <input
                   type="checkbox"
@@ -200,8 +206,8 @@ export default function Index() {
                   }
                 />
               ) : null}
-            </td>
-          </tr>
+            </Td>
+          </Tr>
           {data.children?.map((child) => (
             <MappingMenu key={child.id} data={child} />
           ))}
@@ -210,18 +216,16 @@ export default function Index() {
     }
     return (
       <>
-        <tr className={`border-b`}>
-          <td
-            className={`text-start p-4 text-base ${
-              !!!data.parentId ? "bg-[#667085] text-white" : null
-            }`}
+        <Tr>
+          <Td
+            className={`${!!!data.parentId ? "bg-[#667085] text-white" : null}`}
           >
             <div className={`flex-1 gap-3 flex items-center`}>
               {!!data.parentId ? <Dot /> : null}
               <span>{data.name}</span>
             </div>
-          </td>
-          <td className="text-center p-4 text-base">
+          </Td>
+          <Td className="text-center">
             {!!data.permissions?.find((e) => e.name === "View")?.disable ? (
               <input
                 type="checkbox"
@@ -231,8 +235,8 @@ export default function Index() {
                 }
               />
             ) : null}
-          </td>
-          <td className="text-center p-4 text-base">
+          </Td>
+          <Td className="text-center">
             {!!data.permissions?.find((e) => e.name === "Create")?.disable ? (
               <input
                 type="checkbox"
@@ -242,8 +246,8 @@ export default function Index() {
                 }
               />
             ) : null}
-          </td>
-          <td className="text-center p-4 text-base">
+          </Td>
+          <Td className="text-center">
             {!!data.permissions?.find((e) => e.name === "Edit")?.disable ? (
               <input
                 type="checkbox"
@@ -253,8 +257,8 @@ export default function Index() {
                 }
               />
             ) : null}
-          </td>
-          <td className="text-center p-4 text-base">
+          </Td>
+          <Td className="text-center">
             {!!data.permissions?.find((e) => e.name === "Delete")?.disable ? (
               <input
                 type="checkbox"
@@ -264,8 +268,8 @@ export default function Index() {
                 }
               />
             ) : null}
-          </td>
-        </tr>
+          </Td>
+        </Tr>
       </>
     );
   };
@@ -276,7 +280,11 @@ export default function Index() {
         data={[
           { name: "User", link: "/admin/user/account" },
           { name: "Access", link: "/admin/user/access" },
-          { name: "Mapping Menu", link: "/admin/user/access/mapping-menu" },
+          {
+            name: "Mapping Menu",
+            link: "/admin/user/access/mapping-menu",
+            active: true,
+          },
         ]}
       />
 
@@ -298,34 +306,22 @@ export default function Index() {
             <span className="font-semibold">Back & Save Changes</span>
           </button>
         </div>
-        <div className="border flex-1 flex rounded-md overflow-hidden">
-          <table className="flex-1 border bg-white">
-            <thead className="border-b bg-gray-50">
-              <tr className="px-4">
-                <th className="text-start px-4 py-3 text-base font-medium">
-                  <span>Menu</span>
-                </th>
-                <th className="w-[100px] text-center px-4 py-3 text-base font-medium">
-                  <span>View</span>
-                </th>
-                <th className="w-[100px] text-center px-4 py-3 text-base font-medium">
-                  <span>Create</span>
-                </th>
-                <th className="w-[100px] text-center px-4 py-3 text-base font-medium">
-                  <span>Edit</span>
-                </th>
-                <th className="w-[100px] text-center px-4 py-3 text-base font-medium">
-                  <span>Delete</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {arr.map((menuItem) => (
-                <MappingMenu key={menuItem.id} data={menuItem} />
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <Table>
+          <THead>
+            <Tr>
+              <Th>Menu</Th>
+              <Th className="w-[100px] text-center">View</Th>
+              <Th className="w-[100px] text-center">Create</Th>
+              <Th className="w-[100px] text-center">Edit</Th>
+              <Th className="w-[100px] text-center">Delete</Th>
+            </Tr>
+          </THead>
+          <TBody>
+            {arr.map((menuItem) => (
+              <MappingMenu key={menuItem.id} data={menuItem} />
+            ))}
+          </TBody>
+        </Table>
       </div>
     </div>
   );

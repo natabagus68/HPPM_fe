@@ -1,6 +1,6 @@
-import useLandingPage from "./landing-page-model";
+import useLandingPage from "./_landing-page-model";
 
-export default function LandingPage() {
+export default function Index() {
   const hook = useLandingPage();
   return <button onClick={() => hook.navigate("admin")}>Admin</button>;
 }

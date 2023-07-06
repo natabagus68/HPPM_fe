@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 export default function Td({
   className,
   children,
@@ -8,7 +10,7 @@ export default function Td({
   props?: any | undefined;
 }) {
   return (
-    <td className={`text-start p-4 text-base ${className}`} {...props}>
+    <td className={twMerge("text-start p-4 text-base", className)} {...props}>
       {children}
     </td>
   );
