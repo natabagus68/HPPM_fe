@@ -274,9 +274,9 @@ export default function Index() {
     <div className="flex flex-col gap-4">
       <Breadcrumbs
         data={[
-          { name: "User", link: "../user/account" },
-          { name: "Access", link: "../user/account" },
-          { name: "Mapping Menu", link: "../user/account/mapping-menu" },
+          { name: "User", link: "/admin/user/account" },
+          { name: "Access", link: "/admin/user/access" },
+          { name: "Mapping Menu", link: "/admin/user/access/mapping-menu" },
         ]}
       />
 
