@@ -9,6 +9,7 @@ import {
   TrashIcon,
 } from "lucide-react";
 import { useDataSetInput } from "./dataset-input-model";
+import Filter from "@common/components/table/fitler";
 
 export default function Index() {
   const model = useDataSetInput();
@@ -48,6 +49,7 @@ export default function Index() {
             Filter
           </button>
         </div>
+        {/* <Filter /> */}
 
         {/* table */}
         <div className="w-full mt-4">
