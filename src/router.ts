@@ -8,6 +8,14 @@ export type Path =
   | `/admin`
   | `/admin/admin-layout-model`
   | `/admin/dashboard/general`
+  | `/admin/master-data/dataset-input`
+  | `/admin/master-data/dataset-input/dataset-input-model`
+  | `/admin/master-data/dataset-input/form`
+  | `/admin/master-data/dataset-input/form/form-dataset-input-model`
+  | `/admin/master-data/parameter`
+  | `/admin/master-data/parameter/form`
+  | `/admin/master-data/parameter/form/form-parameter-model`
+  | `/admin/master-data/parameter/parameter-model`
   | `/admin/notification`
   | `/admin/report`
   | `/admin/user/access`
