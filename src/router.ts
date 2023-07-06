@@ -6,7 +6,6 @@ import { components, hooks, utils } from '@generouted/react-router/client'
 export type Path =
   | `/`
   | `/admin`
-  | `/admin/admin-layout-model`
   | `/admin/dashboard`
   | `/admin/master-data/dataset-input`
   | `/admin/master-data/dataset-input/dataset-input-model`
@@ -27,17 +26,16 @@ export type Path =
   | `/admin/notification`
   | `/admin/report`
   | `/admin/user/access`
-  | `/admin/user/access/access-model`
   | `/admin/user/access/mapping-menu`
   | `/admin/user/access/mapping-menu/mapping-menu-model`
   | `/admin/user/account`
-  | `/admin/user/account/account-model`
-  | `/landing-page-model`
+  | `/admin/user/account/:type/form`
+  | `/admin/user/account/details`
   | `/monitoring-realtime`
   | `/monitoring-realtime/monitoring-realtime-model-view`
 
 export type Params = {
-  
+  '/admin/user/account/:type/form': { type: string }
 }
 
 export type ModalPath = never

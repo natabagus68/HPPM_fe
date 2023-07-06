@@ -1,6 +1,5 @@
 import { Edit2, Map, Plus } from "lucide-react";
 import { Trash2 } from "lucide-react";
-import useAccess from "./access-model";
 import Breadcrumbs from "@common/components/breadcrumbs/Breadcrumbs";
 import ModalContainer from "@common/components/modal/modal-container";
 import ModalDelete from "@common/components/modal/modal-delete";
@@ -12,6 +11,7 @@ import TBody from "@common/components/table/tbody";
 import Td from "@common/components/table/td";
 import Filter from "@common/components/table/fitler";
 import Pagination from "@common/components/table/pagination";
+import useAccess from "./_access-model";
 
 export default function Index() {
   const hook = useAccess();
@@ -58,17 +58,6 @@ export default function Index() {
             Access
           </button>
         </div>
-        {/* <div className="w-full bg-gray-50 rounded-md border flex items-center justify-between px-3 py-2">
-          <div className="flex items-center gap-2 border bg-white w-[250px] h-8 rounded-md px-3 text-base">
-            <Search color="#D0D3D9" size={18} />
-            <input
-              type="search"
-              className="outline-none flex-1 bg-transparent"
-              placeholder="Search..."
-              // onChange={handleSearch}
-            />
-          </div>
-        </div> */}
         <Filter />
         <Table>
           <THead>
