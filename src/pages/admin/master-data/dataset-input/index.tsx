@@ -96,7 +96,7 @@ export default function Index() {
                     </p>
                   </div>
                 </th>
-                <th>
+                <th className="w-0">
                   <div className="border-y border-[#D0D3D9]  h-[52px] p-2 flex items-center">
                     <p className="text-[14px] text-[#667085] font-[600]">
                       Action
@@ -143,7 +143,7 @@ export default function Index() {
                     </p>
                   </div>
                 </td>
-                <td>
+                <td className="w-0">
                   <div className="border-b border-[#D0D3D9] py-4 px-2 flex items-center h-[66px] ">
                     <div className="flex gap-[12px]">
                       <button className="w-[46px] h-[46px] bg-[#20519F] rounded-[4px] flex items-center justify-center">

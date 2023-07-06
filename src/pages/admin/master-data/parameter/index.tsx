@@ -137,8 +137,8 @@ export default function Index() {
                     </p>
                   </div>
                 </td>
-                <td>
-                  <div className="border-b border-[#D0D3D9] py-4 px-2 flex items-center h-[66px] ">
+                <td className="w-0">
+                  <div className="border-b border-[#D0D3D9] py-4 px-2 flex items-center h-[66px]">
                     <div className="flex gap-[12px]">
                       <button className="w-[46px] h-[46px] bg-[#20519F] rounded-[4px] flex items-center justify-center">
                         <EyeIcon className="w-4 h-4 text-white" />
