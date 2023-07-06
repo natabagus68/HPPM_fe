@@ -33,6 +33,8 @@ export type Path =
   | `/admin/user/account`
   | `/admin/user/account/account-model`
   | `/landing-page-model`
+  | `/monitoring-realtime`
+  | `/monitoring-realtime/monitoring-realtime-model-view`
 
 export type Params = {
   
