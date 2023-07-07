@@ -8,6 +8,7 @@ import {
   TrashIcon,
 } from "lucide-react";
 import { useJudgementLabel } from "./judgement-label-model";
+import Filter from "@common/components/table/fitler";
 
 export default function Index() {
   const model = useJudgementLabel();
@@ -34,20 +35,12 @@ export default function Index() {
           </button>
         </div>
         {/* filter */}
-        <div className="w-full rounded-sm bg-[#F0F1F3] p-3 flex justify-between mt-4">
-          <div className="h-[40px] w-[425px] relative bg-white rounded-md">
-            <input
-              type="text"
-              placeholder="Search by name..."
-              className="h-full w-full rounded-md outline-none py-2 px-8 placeholder:text-[#D0D3D9] "
-            />
-            <SearchIcon className="w-4 h-4 absolute bottom-3 left-2 text-gray-500" />
-          </div>
+        <Filter>
           <button className="py-[8px] px-[16px] flex gap-[10px] items-center rounded-[4px] bg-white h-[48px]text-[16px] font-[600] text-[#667085]">
             <FilterIcon className="w-4 h-4" />
             Filter
           </button>
-        </div>
+        </Filter>
 
         {/* table */}
         <div className="w-full mt-4">
