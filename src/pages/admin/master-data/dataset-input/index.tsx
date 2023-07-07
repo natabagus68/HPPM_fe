@@ -51,15 +51,16 @@ export default function Index() {
             Add Manual Dataset
           </button>
         </div>
-       
+
         <div className="flex flex-col gap-4">
-        {/* filter */}
+          {/* filter */}
           <Filter>
             <button className="py-[8px] px-[16px] flex gap-[10px] items-center rounded-[4px] bg-white h-[48px]text-[16px] font-[600] text-[#667085]">
               <FilterIcon className="w-4 h-4" />
               Filter
             </button>
           </Filter>
+          {/* table */}
           <Table>
             <THead>
               <Tr>
